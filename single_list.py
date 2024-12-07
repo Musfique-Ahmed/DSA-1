@@ -69,11 +69,13 @@ class SingleLinkedList:
             print("The list is empty!")
 
     def deleteLastNode(self):
-        if (self.head is not None) and (self.head.next is not None):
+        if (self.head is not None):
             current = self.head
             while (current.next != None) and (current.next.next != None):
                 current = current.next
             current.next = None
+        elif (self.head.next is not None):
+            self.head = None
         else:
             print("The list is empty or has only one element!")
 
@@ -85,7 +87,7 @@ class SingleLinkedList:
             current.next = current.next.next
         else:
             print("The list is empty!")
-
+    
 
 
 # ["Anik"]

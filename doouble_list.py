@@ -49,6 +49,34 @@ class DoubleLinkedList:
         else:
             self.head.next.prev = None
             self.head = self.head.next
+
+    def deleteLastNode(self):
+        if self.head is None:
+            print("List is empty!")
+        elif self.head.next is None:
+            self.head = None
+        else:
+            current = self.head
+            while (current.next.next != None):
+                current = current.next
+            current.next = None
+
+    def deleteAnyNode(self, value):
+        if self.head is None:
+            print("The list is empty!")
+        elif self.head.data == value:
+            self.head = self.head.next
+            self.head.prev = None
+        else:
+            current = self.head
+            while (current.next != None) and (current.next.data != value):
+                current = current.next
+            if current.next is not None:
+                current.next.next.prev = current
+                current.next = current.next.next
+            else:
+                print("Value not Found!")
+    
             
 
 
