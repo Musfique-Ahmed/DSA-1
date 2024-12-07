@@ -42,11 +42,14 @@ class DoubleLinkedList:
 
 
     def deleteFirstNode(self):
-        if self.head is not None:
+        if self.head is None:
+            print("The list is empty")
+        elif self.head.next is None:
+            self.head = None
+        else:
             self.head.next.prev = None
             self.head = self.head.next
-        else:
-            print("The list is empty")
+            
 
 
 
