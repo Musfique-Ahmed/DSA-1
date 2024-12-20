@@ -39,12 +39,7 @@ class SingleLinkedList:
         else:
             print(f"The value '{key}' was not found!")
     
-    def display(self):
-        current = self.head
-        while(current):
-            print(current.data, end=" -> ")
-            current = current.next
-        print(f"None")
+
 
     def insertAfterOddIndex(self, data):
         if self.head is None:
