@@ -90,6 +90,7 @@ class DoubleLinkedList:
 
 
 
+
     # def delete_first(self):
     #     if self.head==None:
     #         print("list is empty")
